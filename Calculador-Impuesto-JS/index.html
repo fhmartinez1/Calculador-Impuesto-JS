@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Impuestos</title>
+</head>
+
+<body>
+    <label for="inputPrecio" class="barra-lable">Precio</label>
+    <input type="number" class="barra-input" id="inputPrecio">
+
+    <div class="form-check">
+        <input class="radio-form" type="radio" name="radioProducto" id="radioBienCapital" value="bien-capital">
+        <label class="radio-lable" for="producto1">
+            Bien Capital
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="radio-form" type="radio" name="radioProducto" id="radioInformatica" value="informatica">
+        <label class="radio-lable" for="producto2">
+            Informática
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="radio-form" type="radio" name="radioProducto" id="radioOtro" value="otro">
+        <label class="radio-lable" for="producto3">
+            Otro
+        </label>
+    </div>
+
+    <button id="submitPrecio" class="boton-submit">Calcular</button>
+
+    <h1 id="tituloPrecio" class="texto-precio">Precio Final</h1>
+    <h1 id="precioFinal" class="texto-precio">0</h1>
+
+    <ul id="listaImpuestos" class="list-group">
+    </ul>
+
+    <button id="submitHistorial">Traer Historial</button>
+    <ul id="historialPrecios"></ul>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+</body>
+
+</html>
