@@ -22,9 +22,7 @@ function calcularImpuesto() {
     let tipo_producto;
     let radio_producto = document.getElementsByName("radioProducto");
     for (let i = 0; i < radio_producto.length; i++) {
-        if (radio_producto[i].checked) {
-            tipo_producto = radio_producto[i].value;
-        }
+        radio_producto[i].checked && (tipo_producto = radio_producto[i].value);
     }
 
 
@@ -59,12 +57,10 @@ function calcularImpuesto() {
     let historial_storage = localStorage.getItem("historial");
     let append_historial = { precio: precio, tipo: tipo_producto, precio_final: precio_total };
 
-    if (historial_storage) {
-        historial = JSON.parse(historial_storage);
-    }
+    historial_storage && (historial = JSON.parse(historial_storage));
 
     historial.push(append_historial);
-    localStorage.setItem("historial", JSON.stringify(historial))
+    localStorage.setItem("historial", JSON.stringify(historial));
 }
 
 function getHistorial() {
