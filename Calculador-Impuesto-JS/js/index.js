@@ -94,6 +94,7 @@ function getHistorial() {
 let btn_delete = document.getElementById("deleteHistorial");
 btn_delete.addEventListener('click', () => {
     localStorage.clear();
+    document.getElementById("historialPrecios").innerHTML = "";
     Toastify({
         text: "Historial borrado!",
         duration: 4000,
