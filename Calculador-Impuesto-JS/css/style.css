@@ -1,0 +1,35 @@
+
+
+
+/* Remuevo felchas del input de tipo numero */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn-primary {
+    color: #874C62;
+    background-color: #F2D388;
+    border-color: #F2D388; }
+    .btn-primary:hover {
+      color: #916373;
+      background-color: #eed9a7;
+      border-color: #eed9a7; }
+    .btn-primary:active {
+      background-color: #C98474;
+      border-color: #C98474; }
+
+.form-check-input:hover {
+    color: #916373;
+    background-color: #eed9a7;
+    border-color: #eed9a7; }
+.form-check-input:checked {
+    background-color: #C98474;
+    border-color: #C98474; }

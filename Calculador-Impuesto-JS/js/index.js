@@ -50,7 +50,7 @@ function calcularImpuesto() {
     for (let i = 0; i < lista_filtrada.length; i++) {
         let li_nuevo = document.createElement("li");
         li_nuevo.innerHTML = `${lista_filtrada[i].nombre}`;
-        // li_nuevo.classList.add('list-group-item');
+        li_nuevo.classList.add('list-group-item');
         ul_impuestos.append(li_nuevo);
     }
 
@@ -78,10 +78,34 @@ function getHistorial() {
         for (let i = 0; i < historial.length; i++) {
             let li_nuevo = document.createElement("li");
             li_nuevo.innerHTML = `Precio Inicial: ${historial[i].precio} - Tipo de producto: ${historial[i].tipo} - Precio Final: ${historial[i].precio_final}`;
-            // li_nuevo.classList.add('list-group-item');
+            li_nuevo.classList.add("list-group-item");
             ul_historial.append(li_nuevo);
         }
     } else {
-        ul_historial.innerHTML = "No hay historial disponible.";
+        Toastify({
+            text: "No hay historial disponible.",
+            duration: 3000,
+            position: "right",
+            style: {
+                background: "#F2D388",
+                color: "#874C62",
+                fontWeight: "bold"
+            },
+        }).showToast();
     }
 }
+
+let btn_delete = document.getElementById("deleteHistorial");
+btn_delete.addEventListener('click', () => {
+    localStorage.clear();
+    Toastify({
+        text: "Historial borrado!",
+        duration: 4000,
+        position: "right",
+        style: {
+            background: "#F2D388",
+            color: "#874C62",
+            fontWeight: "bold"
+          },
+    }).showToast();
+});
