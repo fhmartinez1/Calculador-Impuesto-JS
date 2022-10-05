@@ -1,0 +1,5 @@
+[
+    { "id": 1, "nombre": "IVA bienes de capital o informática: 21%", "valor": 0.21, "aplica": ["bien-capital", "informatica"] },
+    { "id": 2, "nombre": "IVA adicional: 20%", "valor": 0.2, "aplica": ["todos"] },
+    { "id": 3, "nombre": "Derechos de importación Ad valorem: 35%", "valor": 0.35, "aplica": ["todos"] }
+]

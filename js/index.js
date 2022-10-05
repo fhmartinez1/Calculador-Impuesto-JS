@@ -2,19 +2,18 @@
 const suma = (a, b) => a + b;
 const aplicarImpuesto = (a, b) => (b.reduce((acumulador, item) => acumulador + item.valor, 0)) * a;
 
-//La idea de este array es poder modificar los impuestos a nombrar en caso de haber un cambio en las leyes de importacion
-let lista_impuestos = [
-    { id: 1, nombre: "IVA bienes de capital o informática: 21%", valor: 0.21, aplica: ["bien-capital", "informatica"] },
-    { id: 2, nombre: "IVA adicional: 20%", valor: 0.2, aplica: ["todos"] },
-    { id: 3, nombre: "Derechos de importación Ad valorem: 35%", valor: 0.35, aplica: ["todos"] }
-];
-
+//Traigo botones del dom y les agrego un listener
 let submit_precio = document.getElementById("submitPrecio");
 let submit_historial = document.getElementById("submitHistorial");
 submit_precio.addEventListener('click', calcularImpuesto);
 submit_historial.addEventListener('click', getHistorial);
 
-function calcularImpuesto() {
+async function calcularImpuesto() {
+
+    //Traigo la lista de impuestos
+    const respuesta = await fetch("./json/impuestos.json");
+    const lista_impuestos = await respuesta.json();
+
     //Guardo el precio escrito en la pagina
     let precio = parseFloat(document.getElementById("inputPrecio").value);
 
