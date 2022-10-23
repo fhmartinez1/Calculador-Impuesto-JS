@@ -39,7 +39,11 @@ async function calcularImpuesto() {
 
     //Muestro el resultado
     let h1_precioFinal = document.getElementById("precioFinal")
-    h1_precioFinal.innerHTML = precio_total; //Deberia convertir la variable a string?
+    h1_precioFinal.innerHTML = "$ " + precio_total; //Deberia convertir la variable a string?
+
+    //Muestro el titulo de impuestos aplicados
+    let titulo_impuestos = document.getElementById("tituloImpuestos");
+    titulo_impuestos.style.visibility = "visible";
 
     //Navego el array para nombrar los impuestos aplicados y creo un li para cada uno
     let ul_impuestos = document.getElementById("listaImpuestos");
@@ -48,6 +52,7 @@ async function calcularImpuesto() {
         let li_nuevo = document.createElement("li");
         li_nuevo.innerHTML = `${lista_filtrada[i].nombre}`;
         li_nuevo.classList.add('list-group-item');
+        li_nuevo.classList.add('lista-impuestos');
         ul_impuestos.append(li_nuevo);
     }
 

@@ -1,3 +1,59 @@
+* {
+  color: #f2e2dc;
+}
+
+html {
+  background-color: #17223B;
+}
+
+p {
+  margin: 0;
+  color: #f2e2dc;
+}
+
+h1 {
+  color: #f2e2dc;
+}
+
+header {
+  background-color: #17223B;
+}
+
+main {
+  background-color: #263859;
+}
+
+footer {
+  background-color: #17223B;
+}
+
+#tituloPrecio {
+  opacity: 50%;
+  font-size: 13px;
+}
+
+#precioFinal {
+  color: #7BC74D;
+  font-size: 65px;
+}
+
+#tituloImpuestos {
+  visibility: hidden;
+  font-size: 14px;
+  text-align: center;
+}
+
+.separador-precio {
+  border: 2px, solid, black;
+  opacity: 100%;
+
+}
+
+.lista-impuestos {
+  background-color: #6B778D;
+  color: #f2e2dc;
+}
+
 
 
 
@@ -15,11 +71,11 @@ input[type=number] {
 }
 
 .btn-primary {
-    color: #874C62;
-    background-color: #F2D388;
-    border-color: #F2D388; }
+    color: #f2e2dc;
+    background-color: #E94560;
+    border-color: #E94560; }
     .btn-primary:hover {
-      color: #916373;
+      color: #f2e2dc;
       background-color: #eed9a7;
       border-color: #eed9a7; }
     .btn-primary:active {
@@ -27,9 +83,9 @@ input[type=number] {
       border-color: #C98474; }
 
 .form-check-input:hover {
-    color: #916373;
-    background-color: #eed9a7;
-    border-color: #eed9a7; }
+    color: #f2e2dc;
+    background-color: #E94560;
+    border-color: #E94560; }
 .form-check-input:checked {
     background-color: #C98474;
     border-color: #C98474; }
